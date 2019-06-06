@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import todo from '../lib/todo-service';
+import {Link} from 'react-router-dom';
 
 class AllTodos extends Component {
   state = {
@@ -27,10 +28,12 @@ class AllTodos extends Component {
           (<div>
             {todos.map(todo => {
               return (
-                <div key={todo._id}>
-                  <h3>{todo.title}</h3>
-                  <p>{todo.body}</p>  
-                </div>
+                <Link to={'/todos/' + todo._id} todos={this.state.todos}>
+                  <div key={todo._id}>
+                    <h3>{todo.title}</h3>
+                    <p>{todo.body}</p>  
+                  </div>
+                </Link>
               )
             })}
           </div>)
