@@ -28,7 +28,7 @@ class AllTodos extends Component {
           (<div>
             {todos.map(todo => {
               return (
-                <Link to={'/todos/' + todo._id} todos={this.state.todos}>
+                <Link to={{pathname: `/todos/${todo._id}/update`, state:{todos}}}>
                   <div key={todo._id}>
                     <h3>{todo.title}</h3>
                     <p>{todo.body}</p>  

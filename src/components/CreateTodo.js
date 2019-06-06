@@ -19,9 +19,7 @@ class CreateTodo extends Component {
     event.preventDefault();
     console.log(this.state);
     todo.createTodo(this.state)
-    //   .then((newTodo) => {console.log(newTodo)})
   }
-
 
   render() {
     return (

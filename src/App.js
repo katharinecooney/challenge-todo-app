@@ -11,7 +11,7 @@ class App extends Component {
       <BrowserRouter>
         <Route exact path="/todos" component={AllTodos} />
         <Route exact path="/todos/create" component={CreateTodo} />
-        <Route exact path="/todos/:id" component={UpdateTodo} />
+        <Route exact path="/todos/:id/update" component={UpdateTodo} />
       </BrowserRouter>
         
      
