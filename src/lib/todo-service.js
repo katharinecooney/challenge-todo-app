@@ -30,7 +30,7 @@ class Todo {
   updateTodo (todoId, newTodo) {
     const {title, body} = newTodo;
     return this.todo
-      .put(`/todos/${todoId}`)
+      .put(`/todos/${todoId}`,{title, body})
       .then(({ data }) => data)
   }
 
